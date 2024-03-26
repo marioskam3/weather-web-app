@@ -1,0 +1,83 @@
+body{
+    text-align: center;
+    margin-top: 150px ;
+    font-family: Helvetica;
+}
+
+.main-container{
+    background-color: aquamarine;
+    max-width: 450px;
+    margin: auto;
+    border: 0;
+    border-radius: 25px;
+    -moz-border-radius: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.search-bar{
+    padding: 10px;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    border: 0;
+}
+
+.fa-sun{
+    color: #FFD43B;
+    font-size: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.temperature h1 ,
+.temperature button{
+    margin-top: 20px;
+    font-size: 40px;
+    display: inline-block; 
+}
+
+
+.temperature button{
+    margin-left: 10px;
+    border-radius: 45px;
+    -moz-border-radius: 45px;
+    padding: 2px;
+    border: 0;
+}
+
+#location{
+    margin-top: -15px;
+    font-size: 30px;
+}
+
+.more-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    margin: 0 auto;
+    
+}
+
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    
+}
+
+.col i{
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.col .wind,
+.col .humidity{
+    font-size: 20px;
+}
+
+
+
+
