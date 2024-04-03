@@ -15,7 +15,7 @@ body{
     padding-bottom: 25px;
 }
 
-.search-bar{
+.search-bar input,button{
     padding: 10px;
     margin-bottom: 25px;
     border-radius: 18px;
