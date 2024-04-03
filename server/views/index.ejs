@@ -12,29 +12,29 @@
     <div class="main-container">
         <form action="/weather" method="GET">
             <div class="search-bar">
-                <input  name="city" placeholder="Athens, Greece ..."/>
+                <input  name="city" placeholder="City..."/>
                 <button type="submit" title="submit"> <i class="fa fa-search"></i> </button>
             </div>
         </form>
         <div class="info-container">
             <i class="fa fa-sun"></i>
             <div class="temperature">
-                <h1>25</h1>
+                <h1><%= weather ? weather.main.temp : '-' %></h1>
                 <button>°C</button>
             </div>
-            <h2 id="location">Athens, Greece</h2>
+            <h2 id="location"><%= weather ? weather.name + ', '+ weather.sys.country  : "---,-"  %></h2>
             <div class="more-info">
                 <div class="col">
                     <i id="wind-icon" class="fa-solid fa-wind"></i>
                     <div>
-                        <p class="wind">10 km/h</p>
+                        <p class="wind"><%= weather ? weather.wind.speed : '-' %> km/h</p>
                         <p>Wind Speed</p>
                     </div>
                 </div>
                 <div class="col">
                     <i id="humidity-icon" class="fa-solid fa-water"></i>
                     <div>
-                        <p class="humidity">50 %</p>
+                        <p class="humidity"><%= weather ? weather.main.humidity : '-' %> %</p>
                         <p>Humidity</p>
                     </div>
                 </div>

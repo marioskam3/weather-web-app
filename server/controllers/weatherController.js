@@ -17,7 +17,7 @@ const getWeather = async (req, res) => {
               }
         }
 
-        return res.status(200).json(weatherResponse.data);
+        return res.render('index.ejs', {title: 'Weather App',weather: weatherResponse.data});
 
     } catch (error) {
         res.status(500).json({ error: error.message });
