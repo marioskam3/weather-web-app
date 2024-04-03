@@ -13,6 +13,6 @@ app.get('/', (req, res) => {
     res.render('index.ejs', {title: 'Weather App'});
 });
 
-app.use('/weather', weatherRoutes);
+app.use('/weather',weatherRoutes);
 
 app.listen(appConfig.port,() => console.log(`Server started at: http://localhost:${appConfig.port}`));
