@@ -9,11 +9,12 @@ const getWeather = async (req, res) => {
 
         if (weatherResponse.status !== 200) {
             if (response.status === 404) {
-                throw new Error('Data not found');
+                throw new Error('Data Not Found');
               } else if (response.status === 500) {
-                throw new Error('Server error');
-              } else {
-                throw new Error('Internal server error');
+                throw new Error('Internal Server Error');
+              } 
+              else if (response.status === 401) {
+                throw new Error('Invalid API Key');
               }
         }
 
