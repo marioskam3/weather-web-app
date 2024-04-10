@@ -17,6 +17,23 @@
             </div>
         </form>
         <div class="info-container">
+            <script>
+                let weatherData;
+                let weatherStatus;
+
+                if (Object.keys(<%- JSON.stringify(weather) %>).length === 0) {
+                    weatherStatus = 'No Data Yet';
+                } else {
+                    weatherData = JSON.parse('<%- JSON.stringify(weather) %>');
+                    weatherStatus = weatherData.weather[0].main;
+                }
+                
+                console.log(weatherStatus);
+
+                
+                
+
+            </script>
             <i class="fa fa-sun"></i>
             <div class="temperature">
                 <h1><%= weather && weather.main ? weather.main.temp : '-' %></h1>
