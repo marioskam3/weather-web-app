@@ -17,9 +17,13 @@
             </div>
         </form>
         <div class="info-container">
+            <img id="weather-icon" src="https://openweathermap.org/img/wn/<%= weather && weather.weather ? weather.weather[0].icon : '01d' %>@4x.png" alt="Weather Icon">
+            <h2 id="weather-status"><%= weather && weather.weather ? weather.weather[0].description : '-------' %></h2>
             <script>
+                /*
                 let weatherData;
                 let weatherStatus;
+                let weatherIcon;
 
                 if (Object.keys(<%- JSON.stringify(weather) %>).length === 0) {
                     weatherStatus = 'No Data Yet';
@@ -28,13 +32,41 @@
                     weatherStatus = weatherData.weather[0].main;
                 }
                 
+                //for custom icons
+                /*
+                switch (weatherStatus) {
+                    case 'Clear':
+                        document.querySelector('#weather-icon').classList.add('fa-sun');
+                        break;
+                    case 'Clouds':
+                        document.querySelector('#weather-icon').classList.add('fa-cloud');
+                        break;
+                    case 'Rain':
+                        
+                        break;
+                    case 'Snow':
+                        
+                        break;
+                    case 'Thunderstorm':
+                        
+                        break;
+                    case 'Mist':
+                        
+                        break;
+                    default:
+                        
+                        break;
+                }
+                
+                
+
                 console.log(weatherStatus);
+                console.log(weatherIcon);
+                */
 
-                
-                
-
+                //use a <i> tag after the end of the script
             </script>
-            <i class="fa fa-sun"></i>
+            
             <div class="temperature">
                 <h1><%= weather && weather.main ? weather.main.temp : '-' %></h1>
                 <button>°C</button>
