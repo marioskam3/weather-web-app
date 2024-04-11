@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+    <h1>Your Weather Forcast <br> Companion </h1>
+    <div class="main-container">
+        <form action="/weather" method="GET">
+            <div class="search-bar">
+                <input  name="city" placeholder="City..."/>
+                <button type="submit" title="submit"> <i class="fa fa-search"></i> </button>
+            </div>
+        </form>
+        <div class="info-container">
+            <img id="weather-icon" src="https://openweathermap.org/img/wn/<%= weather && weather.weather ? weather.weather[0].icon : '01d' %>@4x.png" alt="Weather Icon">
+            <h2 id="weather-status"><%= weather && weather.weather ? weather.weather[0].description : '-------' %></h2>
+            <script>
+                /*
+                let weatherData;
+                let weatherStatus;
+                let weatherIcon;
+
+                if (Object.keys(<%- JSON.stringify(weather) %>).length === 0) {
+                    weatherStatus = 'No Data Yet';
+                } else {
+                    weatherData = JSON.parse('<%- JSON.stringify(weather) %>');
+                    weatherStatus = weatherData.weather[0].main;
+                }
+                
+                //for custom icons
+                /*
+                switch (weatherStatus) {
+                    case 'Clear':
+                        document.querySelector('#weather-icon').classList.add('fa-sun');
+                        break;
+                    case 'Clouds':
+                        document.querySelector('#weather-icon').classList.add('fa-cloud');
+                        break;
+                    case 'Rain':
+                        
+                        break;
+                    case 'Snow':
+                        
+                        break;
+                    case 'Thunderstorm':
+                        
+                        break;
+                    case 'Mist':
+                        
+                        break;
+                    default:
+                        
+                        break;
+                }
+                
+                
+
+                console.log(weatherStatus);
+                console.log(weatherIcon);
+                */
+
+                //use a <i> tag after the end of the script
+            </script>
+            
+            <div class="temperature">
+                <h1><%= weather && weather.main ? weather.main.temp : '-' %></h1>
+                <button>°C</button>
+            </div>
+            <h2 id="location"><%= weather && weather.name && weather.sys? weather.name + ', '+ weather.sys.country  : "---,-"  %></h2>
+            <div class="more-info">
+                <div class="col">
+                    <i id="wind-icon" class="fa-solid fa-wind"></i>
+                    <div>
+                        <p class="wind"><%= weather && weather.wind ? weather.wind.speed : '-' %> km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <i id="humidity-icon" class="fa-solid fa-water"></i>
+                    <div>
+                        <p class="humidity"><%= weather && weather.main ? weather.main.humidity : '-' %> %</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

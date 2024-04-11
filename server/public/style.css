@@ -5,7 +5,7 @@ body{
 }
 
 .main-container{
-    background-color: aquamarine;
+    background-image: linear-gradient(to bottom right, #ff6347, #00bfff);
     max-width: 450px;
     margin: auto;
     border: 0;
@@ -15,21 +15,30 @@ body{
     padding-bottom: 25px;
 }
 
-.search-bar{
+.search-bar input,button{
     padding: 10px;
-    margin-bottom: 25px;
+    margin-bottom: -20px;
     border-radius: 18px;
     -moz-border-radius: 18px;
     border: 0;
 }
 
-.fa-sun{
-    color: #FFD43B;
+#weather-icon{
     font-size: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
-    
 }
+
+#weather-status{
+    font-family: "Lucida Handwriting", cursive;
+    font-size: 30px;
+    margin-top: -50px;
+    margin-bottom: -10px;
+}
+
+
+
+
 
 .temperature h1 ,
 .temperature button{
