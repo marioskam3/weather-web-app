@@ -18,7 +18,7 @@ The app is developed with JavaScript (node.js/express).\
 Weather data are provided from  OpenWeatherAPI.
 
 ## Screenshots
-![screenshot-1](/Screenshots/screenshot1.png)
+![screenshot-1](/screenshots/screenshot1.png)
 
 ## Prerequisites
 The project runs with node.js so you will need npm.\
