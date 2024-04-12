@@ -10,9 +10,11 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.render('index.ejs', {title: 'Weather App', weather: {}});
+    res.render('index.ejs', {title: 'Weather App', weather: {message: '-----'}});
 });
 
 app.use('/weather',weatherRoutes);
 
-app.listen(appConfig.port,() => console.log(`Server started at: http://localhost:${appConfig.port}`));
+app.listen(appConfig.port,() => console.log(`Client started at: http://localhost:${appConfig.port}`));
+
+

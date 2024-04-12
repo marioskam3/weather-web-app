@@ -18,7 +18,10 @@
         </form>
         <div class="info-container">
             <img id="weather-icon" src="https://openweathermap.org/img/wn/<%= weather && weather.weather ? weather.weather[0].icon : '01d' %>@4x.png" alt="Weather Icon">
-            <h2 id="weather-status"><%= weather && weather.weather ? weather.weather[0].description : '-------' %></h2>
+
+            <h2 id="weather-status"><%= weather && weather.weather ? weather.weather[0].description : weather.message %></h2>
+
+
             <script>
                 /*
                 let weatherData;
