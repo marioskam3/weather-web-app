@@ -15,4 +15,4 @@ app.get('/', (req, res) => {
 
 app.use('/weather',weatherRoutes);
 
-app.listen(appConfig.port,() => console.log(`Server started at: http://localhost:${appConfig.port}`));
+app.listen(appConfig.port,() => console.log(`Client started at: http://localhost:${appConfig.port}`));
