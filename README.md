@@ -41,7 +41,7 @@ Install npm: `sudo apt install npm`
 - Node/express
 
 ## API
-All the weather data used in this project comes from (OpenWeather)[https://openweathermap.org/] API.
+All the weather data used in this project comes from [OpenWeather](https://openweathermap.org/) API.
 
 ## Future Plans
 TO BE ADDED.
