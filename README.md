@@ -2,6 +2,7 @@
 
 ## Contents
 - [Description](#Description)
+- [Screenshots](#Screenshots)
 - [Prerequisites](#Prerequisites)
 - [Installation](#Installation)
 - [Usage](#Usage)
@@ -15,6 +16,9 @@
 This is a weather web application that provides current weather information for the searched city.\
 The app is developed with JavaScript (node.js/express).\
 Weather data are provided from  OpenWeatherAPI.
+
+## Screenshots
+![screenshot-1](/Screenshots/screenshot1.png)
 
 ## Prerequisites
 The project runs with node.js so you will need npm.\
